@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elevate Energy – prototype</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 3D scene 1: opaque frames (hero -> blueprint). Sits BELOW the page content. -->
+<canvas id="cv1" class="cv cv1" width="1920" height="1248"></canvas>
+
+<div id="loader"><div class="bar"><i></i></div><span>Loading 3D&hellip; <b id="loadpct">0%</b></span></div>
+
+<main id="page">
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="hero">
+    <header class="header">
+      <div class="logo"><img src="assets/logo.svg" alt="Elevate Energy" width="117" height="40"></div>
+      <nav class="nav"><a href="#technology">Technology</a><a href="#company">Company</a><a href="#contact">Contact</a></nav>
+      <div class="actions"><a class="btn btn-light btn-sm" href="#contact">Discuss your application</a></div>
+    </header>
+    <div class="hero-content">
+      <div class="hero-copy">
+        <div class="attribution rise"><img src="assets/flag-eu.svg" width="28" height="28" alt=""><span>Powered by Europe</span></div>
+        <h1 class="hero-h1 rise">High-energy battery cells from Europe</h1>
+        <div class="hero-actions rise">
+          <a class="btn btn-light" href="#contact">Discuss your application</a>
+          <a class="btn btn-outline" href="#technology">Explore technology</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-support rise"><p>Energy-dense, high-pulse pouch cells and battery packs.</p></div>
+  </section>
+
+  <!-- ================= DATA ================= -->
+  <section id="data" class="data">
+    <div class="data-inner">
+      <div class="product-image">
+        <svg class="corner tl" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <svg class="corner tr" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <svg class="corner bl" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <svg class="corner br" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="blk"><p class="num g-num">13 Ah</p><p class="lbl">cell capacity</p></div></div>
+        <div class="spec"><div class="divider"><i></i><span></span></div><div class="blk"><p class="num g-num">180 Wh</p><p class="lbl">Pack energy (4S1P)</p></div></div>
+        <div class="spec"><div class="divider"><i></i><span></span></div><div class="blk"><p class="num g-num">98%</p><p class="lbl">Retention at 80 °C</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECHNOLOGY (scrolls normally) ================= -->
+  <section id="technology" class="technology">
+    <p class="eyebrow-dark">From a single cell to a finished pack</p>
+    <div class="reveal" data-reveal>
+      <h2 class="h48 base">A single pouch cell format, developed over five years and validated in production, is the basis for every pack we deliver.</h2>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCT: pinned viewport with 2 slides (cell -> battery packs) while scene 2 / part P plays ================= -->
+  <div id="pin1" class="pin1">
+    <div id="frame60" class="frame60">
+      <section id="product" class="product">
+        <div class="slide" id="slide1">
+          <div class="slide-in">
+            <div class="product-intro">
+              <h2 class="h128">LVT-E13Si cell</h2>
+              <p class="mono16 center w580">A high-nickel NMC, high-silicon pouch cell in one 13 Ah format.</p>
+            </div>
+            <div class="product-specs">
+              <div class="pspec"><p class="pnum">324 Wh/kg</p><p class="plbl">energy density</p></div>
+              <div class="pspec dashed"><p class="pnum">3234 W/kg</p><p class="plbl">power density</p></div>
+              <div class="pspec"><p class="pnum">500</p><p class="plbl">charging cycles</p></div>
+            </div>
+            <a class="btn btn-outline" href="#">Cell specification</a>
+          </div>
+        </div>
+        <div class="slide" id="slide2">
+          <div class="slide-in">
+            <div class="product-intro">
+              <h2 class="h128">Battery packs</h2>
+              <p class="mono16 center w580">Cells combined in series and parallel to reach the voltage, capacity and geometry your application requires.</p>
+            </div>
+            <div class="product-specs">
+              <div class="pspec"><p class="pnum">273.4 Wh/kg</p><p class="plbl">Energy density (4S1P)</p></div>
+              <div class="pspec dashed"><p class="pnum">60 A</p><p class="plbl">maximum pulse discharge current</p></div>
+              <div class="pspec"><p class="pnum">-10 to + 55 °C</p><p class="plbl">operating temperature</p></div>
+            </div>
+            <a class="btn btn-outline" href="#">More about packs</a>
+          </div>
+        </div>
+        <div class="deco-marks"><i></i><i></i></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ================= BENEFITS: header scrolls in, then the box + 3 text slides are pinned while the 4-cell stack turns ================= -->
+  <section id="benefits" class="benefits">
+    <div class="glow glow-b"><div></div></div>
+    <div class="benefit-header">
+      <p class="eyebrow-light">Benefits</p>
+      <h2 class="h64 g-light">What you get<br>with Elevate Energy</h2>
+    </div>
+    <div id="bpin" class="bpin">
+      <div id="bstick" class="bstick">
+        <div class="stack-box">
+          <svg class="corner tl" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+          <svg class="corner tr" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+          <svg class="corner bl" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+          <svg class="corner br" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        </div>
+        <div class="bslide row" data-i="0">
+          <div class="benefit-content">
+            <div class="b-head"><span class="b-icon"><span class="b-ibox" style="inset:21.59% 2.35% 22.73% 1.14%"><img src="assets/benefit-icon-1.svg" alt=""></span></span><p class="b-title">Serial production</p></div>
+            <p class="mono16 b-text">Design frozen and tested. AIAG APQP validation to volume supply is under way.</p>
+          </div>
+          <div class="benefit-divider"><span></span><i></i></div>
+        </div>
+        <div class="bslide" data-i="1">
+          <div class="benefit-content">
+            <div class="b-head"><span class="b-icon"><span class="b-ibox" style="inset:14.23% 0 23.6% 1.56%"><img src="assets/benefit-icon-2.svg" alt=""></span></span><p class="b-title">No third-country dependency</p></div>
+            <p class="mono16 b-text">EU and allied sourcing, traced to the plant. Nothing is restricted by a third-party jurisdiction.</p>
+          </div>
+          <div class="benefit-divider"><span></span><i></i></div>
+        </div>
+        <div class="bslide" data-i="2">
+          <div class="benefit-content">
+            <div class="b-head"><span class="b-icon"><span class="b-ibox" style="inset:7.81% 7.81% 9.38% 9.38%"><img src="assets/benefit-icon-3.svg" alt=""></span></span><p class="b-title">Verified outside of our own lab</p></div>
+            <p class="mono16 b-text">Field-tested by a customer. Discharge performance confirmed on an independent bench.</p>
+          </div>
+          <div class="benefit-divider"><span></span><i></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APPLICATIONS + COMPANY + CONTACT CARDS ================= -->
+  <div id="frame54" class="frame54">
+    <div class="glow glow-a"><div></div></div>
+
+    <section id="applications" class="apps">
+      <div id="apin" class="apin"><div id="astick" class="astick">
+      <div class="apps-top">
+        <p class="eyebrow-white">Applications</p>
+        <h2 class="h64 g-light">The cell as a building block for different applications</h2>
+      </div>
+      <div class="drone-box">
+        <svg class="corner tl" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <svg class="corner tr" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <svg class="corner bl" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <svg class="corner br" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+      </div>
+      </div></div>
+      <div class="apps-bottom">
+        <div class="apps-copy">
+          <p class="mono16 light">One cell, built up into the pack your platform needs. Four in series for a small eVTOL, more in parallel for endurance, stacked again for larger airframes and ground or marine systems.</p>
+          <a class="btn btn-light" href="#contact">Discuss your application</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="company">
+      <div class="company-top">
+        <div class="company-block">
+        <p class="eyebrow-dim">One partner from cell to delivery</p>
+        <div class="reveal" data-reveal>
+          <h2 class="h48 base">A Poland-based battery cell company, registered in Warsaw. We design, qualify and supply the cell, and build it into packs around what each platform actually needs.</h2>
+        </div>
+        </div>
+        <a class="btn btn-outline-dark" href="#">About elevate</a>
+      </div>
+      <div class="globe-wrap">
+        <div class="globe-inner">
+          <img class="globe" src="assets/globe-grid.svg" alt="">
+          <div class="ov-bottom"></div><div class="ov-left"></div>
+          <div class="facts">
+            <div class="fact"><p class="mono18">Based in</p><p class="h48w">Warsaw</p></div>
+            <div class="fact2">
+              <div class="divider2"><span></span><i></i></div>
+              <p class="mono18">Technology licensed from</p><p class="h48w">2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cards">
+      <div class="cards-box">
+        <svg class="corner tl" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <svg class="corner tr" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <svg class="corner bl" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <svg class="corner br" viewBox="0 0 80.5 80.5"><path d="M80.5 0.5H0.5V80.5"/></svg>
+        <div class="cards-row">
+          <article class="card card-light">
+            <div class="card-body">
+              <p class="mono18 muted-dark">OEMS &amp; Integrators</p>
+              <h3 class="h32">Discuss your application</h3>
+              <p class="mono16 muted-dark">Tell us your platform, duty cycle and weight budget. We'll come back with a cell and pack configuration.</p>
+            </div>
+            <a class="btn btn-blue" href="#">Discuss your application</a>
+          </article>
+          <article class="card card-dark">
+            <div class="card-body">
+              <p class="mono18 light">Partners</p>
+              <h3 class="h32w card-h">Souvereign cell supply chain</h3>
+              <p class="mono16 light">We work with integrators, material suppliers and industrial partners who want a.</p>
+            </div>
+            <a class="btn btn-outline" href="#">Get in touch</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="footer" class="footer">
+    <div class="footer-bg"></div><div class="footer-shade"></div>
+    <div class="footer-top">
+      <div class="f-left">
+        <img src="assets/footer-logo.svg" width="31" height="36" alt="Elevate">
+        <div class="f-tag"><p class="f-h">Powered by Europe</p><p class="f-p">High-energy battery cells and packs,<br>powered by European ownership and integration.</p></div>
+      </div>
+      <div class="f-right">
+        <div class="f-col f-nav"><p class="f-h">Navigate</p><a>Home</a><a>Technology</a><a>Applications</a><a>Company</a><a>Contact</a></div>
+        <div class="f-col f-contact"><p class="f-h">Contact</p>
+          <p>Elevate Energy sp. z o.o.<br>Aleje Ujazdowskie 41,<br>Warsaw, Poland</p>
+          <p class="f-mail">sales@elevate.eu.com<br>elevate.eu.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p class="copy">Copyright: © 2026 Elevate Energy</p>
+      <img class="wordmark wm-crisp" src="assets/footer-wordmark-crisp.svg" alt="Elevate"><img class="wordmark wm-blur" src="assets/footer-wordmark.svg" alt="" aria-hidden="true">
+    </div>
+  </footer>
+</main>
+
+<!-- 3D scene 2: transparent frames (cell -> rack -> stack -> drone). Sits ABOVE the page content. -->
+<canvas id="cv2" class="cv cv2" width="1920" height="1248"></canvas>
+
+<div id="hud" hidden></div>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
