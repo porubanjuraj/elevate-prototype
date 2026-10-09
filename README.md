@@ -2,3 +2,5 @@
 
 Static site (no build). Open `index.html` through any web server, or publish with GitHub Pages.
 Scroll-driven 3D image sequences are in `frames/`.
+
+Last update: 2026-10-09 (blueprint lies flat).
